@@ -1,14 +1,18 @@
 package com.boot.jpa.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class BootModel {
-	private int id;
+	@Id
+	private Integer id;
 	private String bootVersion;
 	private String jpaVersion;
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getBootVersion() {
