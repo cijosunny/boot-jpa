@@ -1,5 +1,7 @@
 package com.boot.jpa.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,11 @@ public class BankAccountServiceImpl implements BankAccountService {
 	public Boolean deleteBankAccount(String upiId) {
 		bankRepo.delete(upiId);
 		return Boolean.TRUE;
+	}
+
+	@Override
+	public List<BankAccount> getAllBankAccount() {
+		return bankRepo.findAll();
 	}
 	
 }
