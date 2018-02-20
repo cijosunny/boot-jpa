@@ -1,5 +1,7 @@
 package com.boot.jpa.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,5 +32,9 @@ public class BootController {
 	@PostMapping("/save")
 	public ResponseEntity<?> saveBootJPA(@RequestBody BootModel bootModel){
 		return ResponseEntity.ok(bootService.saveBootJPA(bootModel));
+	}
+	@GetMapping("/hellooo")
+	public Map<String, String> saveBootJPA(){
+		return null;	//No error will be thrown - Nothing will be displayed in the response
 	}
 }
