@@ -3,7 +3,11 @@ package com.boot.jpa.service;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.boot.jpa.exception.AccountNotFoundException;
 import com.boot.jpa.model.BankAccount;
@@ -43,4 +47,5 @@ public class TransactionService {
 		accountService.updateBankAccount(account);
 		return Boolean.TRUE;
 	}
+	
 }
